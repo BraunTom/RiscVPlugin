@@ -1,0 +1,14 @@
+{
+	"category" : "RiscVPlugin",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "RiscVAlien",
+	"pools" : [
+		 ],
+	"super" : "CogProcessorAlien",
+	"type" : "bytes" }

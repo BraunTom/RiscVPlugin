@@ -1,0 +1,8 @@
+{
+	"class" : {
+		"ISA" : "WoC 4/13/2022 14:15",
+		"initialize" : "WoC 4/14/2022 13:22",
+		"initializeAbstractRegisters" : "WoC 4/14/2022 13:26",
+		"wordSize" : "WoC 4/13/2022 14:13" },
+	"instance" : {
+		 } }

@@ -1,0 +1,14 @@
+{
+	"category" : "RiscVPlugin",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "RiscVPlugin",
+	"pools" : [
+		 ],
+	"super" : "ProcessorSimulatorPlugin",
+	"type" : "normal" }

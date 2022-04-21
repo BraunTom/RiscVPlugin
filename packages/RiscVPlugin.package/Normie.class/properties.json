@@ -1,0 +1,14 @@
+{
+	"category" : "RiscVPlugin",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "Normie",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }
