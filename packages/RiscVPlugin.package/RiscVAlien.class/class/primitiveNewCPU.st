@@ -1,5 +1,5 @@
 as yet unclassified
 primitiveNewCPU
 	
-	<primitive: 'primitiveNewCPU' module: 'RiscV64Plugin'>
+	<primitive: 'primitiveNewCPU' module: 'RiscVPlugin'>
 	^self primitiveFailed
