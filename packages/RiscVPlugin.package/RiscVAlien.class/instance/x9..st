@@ -1,3 +1,3 @@
 accessing
 x9: anUnsignedInteger
-	^self unsignedLongLongAt: 37 put: anUnsignedInteger
+	^self unsignedLongLongAt: 73 put: anUnsignedInteger

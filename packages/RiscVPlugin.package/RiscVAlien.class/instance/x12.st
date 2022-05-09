@@ -1,3 +1,3 @@
 accessing
 x12
-	^self unsignedLongLongAt: 49
+	^self unsignedLongLongAt: 97

@@ -1,3 +1,3 @@
 accessing
 x22
-	^self unsignedLongLongAt: 89
+	^self unsignedLongLongAt: 177

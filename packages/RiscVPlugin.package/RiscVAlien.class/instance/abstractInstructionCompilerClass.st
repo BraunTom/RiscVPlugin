@@ -1,4 +1,4 @@
-as yet unclassified
+Cog API
 abstractInstructionCompilerClass
 
 	^ CogRiscVCompiler

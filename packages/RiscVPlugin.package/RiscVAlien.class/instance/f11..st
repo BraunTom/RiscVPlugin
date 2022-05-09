@@ -1,3 +1,3 @@
 accessing
 f11: anUnsignedInteger
-	^self unsignedLongLongAt: 173 put: anUnsignedInteger
+	^self unsignedLongLongAt: 345 put: anUnsignedInteger

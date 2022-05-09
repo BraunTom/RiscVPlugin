@@ -1,3 +1,3 @@
 accessing
 x6: anUnsignedInteger
-	^self unsignedLongLongAt: 25 put: anUnsignedInteger
+	^self unsignedLongLongAt: 49 put: anUnsignedInteger

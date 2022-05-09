@@ -1,3 +1,3 @@
 accessing
 x25: anUnsignedInteger
-	^self unsignedLongLongAt: 101 put: anUnsignedInteger
+	^self unsignedLongLongAt: 201 put: anUnsignedInteger

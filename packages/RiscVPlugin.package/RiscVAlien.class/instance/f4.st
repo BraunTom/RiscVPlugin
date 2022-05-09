@@ -1,3 +1,3 @@
 accessing
 f4
-	^self unsignedLongLongAt: 145
+	^self unsignedLongLongAt: 289
