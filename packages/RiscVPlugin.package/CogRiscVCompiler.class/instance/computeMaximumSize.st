@@ -48,7 +48,7 @@ computeMaximumSize
 		[LogicalShiftRightCqR] -> [^ 4].
 		[AddRR] -> [^ 4].
 		[JumpGreater] -> [^ 4].
-		[MoveRXwrR] -> [^ 4].
+		[MoveRXwrR] -> [^ 12].
 		[Jump] -> [^ 4].
 		[JumpAbove] -> [^ 4].
 		

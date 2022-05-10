@@ -13,19 +13,19 @@ noteFollowingConditionalBranch: branch
 	opcode caseOf: {
 		[CmpCqR]	-> 	["the next branch will compare the current given register and the register we move the constant into"
 						newBranchLeft := operands at: 1.
-						 newBranchRight := X28.
-						 "move constant into X28"
+						 newBranchRight := TempReg.
+						 "move constant into TempReg"
 						 opcode := MoveCqR.
-						 operands at: 1 put: X28].
+						 operands at: 1 put: TempReg].
 		[CmpRR]	-> 	["just give the two registers to the next instruction"
 						newBranchLeft := operands at: 0.
 						 newBranchRight :=operands at: 1.
 						opcode := Label].
-		[TstCqR] -> [newBranchLeft := X28.
+		[TstCqR] -> [newBranchLeft := TempReg.
 						 newBranchRight := ZERO.
-						"move constant into X28"
+						"move constant into TempReg"
 						 opcode := MoveCqR.
-						 operands at: 0 put: X28]
+						 operands at: 0 put: TempReg]
 	} otherwise: [self unreachable].
 
 	branch rewriteOpcode: branch opcode with: newBranchLeft with: newBranchRight.

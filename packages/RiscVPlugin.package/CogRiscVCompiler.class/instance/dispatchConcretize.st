@@ -38,6 +38,9 @@ dispatchConcretize
 		[LoadEffectiveAddressMwrR] -> [^ self concretizeLoadEffectiveAddressMwrR].
 		[SubRRR] -> [^ self concretizeLoadSubRRR].
 		[LogicalShiftRightCqR] -> [^ self concretizeLogicalShiftRightCqR].
+		[AddRR] -> [^ self concretizeAddRR].
+		[MoveRXwrR] -> [^ self concretizeMoveRXwrR].
+		[JumpGreater] -> [^ self concretizeJumpGreater].
 		
 	}.
 	^ 0 "keep slang happy"
