@@ -8,10 +8,10 @@ concretizeMoveXwrRR
 	base := operands at: 1.
 	dest := operands at: 2.
 	
-	"R[dest] = Mem[base + index * 4]"
+	"R[dest] = Mem[base + index * 8]"
 	
 	"X28 = index * 4"
-	instrOffset := self slliFrom: index to: X28 by: 2 offset: 0.
+	instrOffset := self slliFrom: index to: X28 by: 3 offset: 0.
 	"X28 = base + X28"
 	instrOffset := self addR: base toR: X28 andWriteTo: X28 offset: instrOffset.
 	"R[dest] = Mem[X28]"

@@ -6,8 +6,6 @@ dispatchConcretize
 		[RetN] -> [^self concretizeRetN].
 		[MovePerfCnt64RL] -> [^ self concretizeMovePerfCnt64RL].
 		[MoveRR] -> [^ self concretizeMoveRR].
-		[FPReg] -> [^ self concretizeFPReg].
-		[ReceiverResultReg] -> [^ self concretizeReceiverResultReg].
 		[MoveRAw] -> [^ self concretizeMoveRAw].
 		[CmpCqR] -> [^ self concretizeCmpCqR].
 		[MoveCqR] -> [^ self concretizeMoveCqR].
