@@ -1,4 +1,4 @@
-as yet unclassified
+abi
 genRemoveNArgsFromStack: n
 	"This is a no-op on Riscv since the ABI passes up to 4 args in registers and trampolines currently observe that limit."
 	<inline: true>

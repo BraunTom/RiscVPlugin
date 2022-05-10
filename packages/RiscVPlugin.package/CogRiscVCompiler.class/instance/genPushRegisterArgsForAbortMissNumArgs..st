@@ -1,4 +1,4 @@
-as yet unclassified
+smalltalk calling convention
 genPushRegisterArgsForAbortMissNumArgs: numArgs
 	"Ensure that the register args are pushed before the outer and
 	 inner retpcs at an entry miss for arity <= self numRegArgs.  The

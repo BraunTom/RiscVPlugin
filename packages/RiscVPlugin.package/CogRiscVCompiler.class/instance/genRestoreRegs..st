@@ -1,4 +1,4 @@
-as yet unclassified
+abi
 genRestoreRegs: regMask
 	"Restore the registers in regMask as saved by genSaveRegs:.
 	 We don't need to do anything because all of the abstract registers are

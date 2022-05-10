@@ -33,6 +33,11 @@ dispatchConcretize
 		[MoveRMwr] -> [^ self concretizeMoveRMwr].
 		[MoveCwR] -> [^ self concretizeMoveCwR].
 		[JumpBelow] -> [^ self concretizeJumpBelow].
-		"[__] -> [^ self concretize__]."
+		[JumpAboveOrEqual] -> [^ self concretizeJumpAboveOrEqual].
+		[OrCqR] -> [^ self concretizeOrCqR].
+		[LoadEffectiveAddressMwrR] -> [^ self concretizeLoadEffectiveAddressMwrR].
+		[SubRRR] -> [^ self concretizeLoadSubRRR].
+		[LogicalShiftRightCqR] -> [^ self concretizeLogicalShiftRightCqR].
+		
 	}.
 	^ 0 "keep slang happy"

@@ -16,7 +16,7 @@ movI: immediate toR: register offset: offset
 	
 	instrOffset := self addiRd: register rs1: X0 imm: (immediate bitAnd: 16rFFF) offset: instrOffset. "register[11:0] = immediate[11:0]"
 	
-	immediate >= 16r100000000
+	immediate >= (1 << 12)
 		ifTrue: [
 			"register[31:12] = immediate[31:12] "
 			instrOffset := self 

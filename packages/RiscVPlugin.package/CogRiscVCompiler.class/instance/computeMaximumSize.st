@@ -8,10 +8,10 @@ computeMaximumSize
 		[MoveRR] -> [^ 4].
 		[MoveRAw] -> [ | destAddr |
 			destAddr := operands at: 1.
-			^ 4 + (destAddr < 16r1000 ifTrue: [4] ifFalse: [destAddr < 16r100000000 ifTrue: [8] ifFalse: [20]])].
+			^ 4 + (self calculateMoveIToROf: destAddr)].
 		[MoveCqR] -> [ | constant |
 			constant := operands at: 0.
-			^ (constant < 16r1000 ifTrue: [4] ifFalse: [constant < 16r100000000 ifTrue: [8] ifFalse: [20]])].
+			^ (self calculateMoveIToROf: constant)].
 		[CmpCqR] -> [^ 4].
 		[JumpLess] -> [^ 4].
 		[MoveMwrR] -> [^ 4].
@@ -29,18 +29,28 @@ computeMaximumSize
 		[LogicalShiftLeftCqR] -> [^ 4].
 		[MoveAwR] -> [| destAddr |
 			destAddr := operands at: 0.
-			^ 4 + (destAddr < 16r1000 ifTrue: [4] ifFalse: [destAddr < 16r100000000 ifTrue: [8] ifFalse: [20]])].
+			^ 4 + (self calculateMoveIToROf: destAddr)].
 		[SubCqR] -> [^ 4].
 		[PushR] -> [^ 8].
 		[Call] -> [^ 4].
 		[CallFull] -> [| offset |
-			offset := operands at: 0.^ 4 + (offset < 16r1000 ifTrue: [4] ifFalse: [offset < 16r100000000 ifTrue: [8] ifFalse: [20]])].
+			offset := operands at: 0.^ 4 + (self calculateMoveIToROf: offset)].
 		[PopR] -> [^ 8].
 		[MoveRMwr] -> [^ 4].
-		[MoveCwR] -> [^ 4].
+		[MoveCwR] -> [^ (self calculateMoveIToROf: (operands at: 0))].
 		[CmpRR] -> [^ 4].
 		[JumpBelow] -> [^ 4].
 		[JumpAboveOrEqual] -> [^ 4].
+		[OrCqR] -> [^ 4].
+		[LoadEffectiveAddressMwrR] -> [| offset |
+			offset := operands at: 0.^ 4 + (self calculateMoveIToROf: offset)].
+		[SubRRR] -> [^ 4].
+		[LogicalShiftRightCqR] -> [^ 4].
+		[AddRR] -> [^ 4].
+		[JumpGreater] -> [^ 4].
+		[MoveRXwrR] -> [^ 4].
+		[Jump] -> [^ 4].
+		[JumpAbove] -> [^ 4].
 		
 	}.
 	^ 0 "keep slang happy"
