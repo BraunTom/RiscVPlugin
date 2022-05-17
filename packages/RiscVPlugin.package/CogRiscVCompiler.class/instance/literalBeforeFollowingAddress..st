@@ -5,5 +5,6 @@ literalBeforeFollowingAddress: followingAddress
 	"
 	-16 to: 0
 		do: [:ea| Transcript showln: (cogit processor disassembleInstructionAt: followingAddress + (ea * 4) In: objectMemory memory)]
+		cogit processor disassembleInstructionAt: followingAddress - 4 In: objectMemory memory
 		"
 	self halt.
