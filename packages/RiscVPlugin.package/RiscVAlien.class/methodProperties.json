@@ -80,6 +80,7 @@
 		"memoryOffset:" : "WoC 5/3/2022 19:42",
 		"pc" : "LM/WoC 5/6/2022 19:22",
 		"pc:" : "LM/WoC 5/6/2022 19:22",
+		"primitiveDisassembleAt:inMemory:" : "WoC 5/13/2022 14:51",
 		"primitiveResetCPU" : "WoC 5/3/2022 18:18",
 		"primitiveRunInMemory:minimumAddress:readOnlyBelow:" : "WoC 5/3/2022 22:35",
 		"primitiveSetMemoryOffset:" : "WoC 5/3/2022 19:43",

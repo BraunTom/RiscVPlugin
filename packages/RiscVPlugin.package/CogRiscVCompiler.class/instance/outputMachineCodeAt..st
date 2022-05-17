@@ -4,4 +4,4 @@ outputMachineCodeAt: targetAddress
 	<inline: true>
 	0 to: machineCodeSize - 1 by: 4 do:
 		[:j|
-		cogit codeLong32At: targetAddress + j put: (self adaptEndianness:(machineCode at: j // 4))]
+		cogit codeLong32At: targetAddress + j put: (self adaptEndianness: (machineCode at: j // 4))]

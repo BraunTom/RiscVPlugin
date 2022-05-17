@@ -25,7 +25,13 @@ noteFollowingConditionalBranch: branch
 						 newBranchRight := ZERO.
 						"move constant into TempReg"
 						 opcode := MoveCqR.
-						 operands at: 0 put: TempReg]
+						 operands at: 0 put: TempReg].
+		[AndCqRR] -> [newBranchLeft := operands at: 2.
+						 newBranchRight := ZERO].
+		[CmpC32R] -> [newBranchLeft := operands at: 1.
+						 newBranchRight := TempReg.
+						 opcode := MoveC32R.
+						 operands at: 1 put: TempReg].
 	} otherwise: [self unreachable].
 
 	branch rewriteOpcode: branch opcode with: newBranchLeft with: newBranchRight.

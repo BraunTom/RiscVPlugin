@@ -39,6 +39,14 @@ dispatchConcretize
 		[AddRR] -> [^ self concretizeAddRR].
 		[MoveRXwrR] -> [^ self concretizeMoveRXwrR].
 		[JumpGreater] -> [^ self concretizeJumpGreater].
-		
+		[Jump] -> [^ self concretizeJump].
+		[JumpAbove] -> [^ self concretizeJumpAbove].
+		[JumpFull] -> [^ self concretizeJumpFull].
+		[JumpR] -> [^ self concretizeJumpR].
+		[AndCqRR] -> [^ self concretizeAndCqRR].
+		[AlignmentNops] -> [^ self concretizeAlignmentNops].
+		[MoveC32R] -> [^ self concretizeMoveCwR].
+		[JumpLong] -> [^ self concretizeJumpFull].
+		[JumpLongZero] -> [^ self concretizeJumpLongZero].
 	}.
 	^ 0 "keep slang happy"
