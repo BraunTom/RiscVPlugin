@@ -4,6 +4,6 @@ luiImm: immediate toRd: rd offset: offset
 
 	machineCode
 		at: offset
-		put: (self uTypeImm: immediate rd: rd opcode: 2r0110111).
+		put: (self uTypeImm: immediate rd: rd opcode: self luiOpcode).
 		
 	^ offset + 1

@@ -24,6 +24,6 @@ primitiveNewWithArgUninitialized
 				ifTrue:
 					[self
 						pop: argumentCount + 1
-						thenPush: (objectMemory instantiateClass: (self stackValue: 1) indexableSize: size)]
+						thenPush: (objectMemory instantiateUninitializedClass: (self stackValue: 1) indexableSize: size)]
 				ifFalse:
 					[self primitiveFailFor: PrimErrNoMemory]]

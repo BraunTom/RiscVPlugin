@@ -11,7 +11,7 @@ computeMaximumSize
 			^ 4 + (self calculateMoveIToROf: destAddr)].
 		[MoveCqR] -> [ | constant |
 			constant := operands at: 0.
-			^ (self calculateMoveIToROf: constant)].
+			^ 4 + (self calculateMoveIToROf: constant)].
 		[CmpCqR] -> [^ 4].
 		[JumpLess] -> [^ 4].
 		[MoveMwrR] -> [^ 4].
@@ -45,7 +45,7 @@ computeMaximumSize
 			offset := operands at: 0.^ 4 + (self calculateMoveIToROf: offset)].
 		[PopR] -> [^ 8].
 		[MoveRMwr] -> [^ 4].
-		[MoveCwR] -> [^ (self calculateMoveIToROf: (operands at: 0))].
+		[MoveCwR] -> [^ 4+ (self calculateMoveIToROf: (operands at: 0))].
 		[CmpRR] -> [^ 4].
 		[JumpBelow] -> [^ 4].
 		[JumpAboveOrEqual] -> [^ 4].
@@ -71,8 +71,16 @@ computeMaximumSize
 		[JumpLong] -> [^ 4 + (self calculateMoveIToROf: self longJumpTargetAddress asUnsignedInteger)].
 		[MoveC32R] -> [ | constant |
 			constant := operands at: 0.
+			^ 4 + (self calculateMoveIToROf: constant)].
+		[JumpLongZero] -> [| offset |
+		offset := self computeJumpTargetOffsetPlus: 0.
+		^ offset < 16r1000 ifTrue: [4] ifFalse: [20]].
+		[PrivMove] -> [| constant |
+			constant := operands at: 0.
 			^ (self calculateMoveIToROf: constant)].
-		[JumpLongZero] -> [^ 4 "+ (self calculateMoveIToROf: self longJumpTargetAddress asUnsignedInteger)"].
+		[XorCwR] -> [| constant |
+			constant := operands at: 0.
+			^ (self calculateMoveIToROf: constant) + 4]
 		
 	}.
 	^ 0 "keep slang happy"

@@ -15,7 +15,7 @@ noteFollowingConditionalBranch: branch
 						newBranchLeft := operands at: 1.
 						 newBranchRight := TempReg.
 						 "move constant into TempReg"
-						 opcode := MoveCqR.
+						 opcode := PrivMove.
 						 operands at: 1 put: TempReg].
 		[CmpRR]	-> 	["just give the two registers to the next instruction"
 						newBranchLeft := operands at: 0.
@@ -24,13 +24,17 @@ noteFollowingConditionalBranch: branch
 		[TstCqR] -> [newBranchLeft := TempReg.
 						 newBranchRight := ZERO.
 						"move constant into TempReg"
-						 opcode := MoveCqR.
+						 opcode := PrivMove.
 						 operands at: 0 put: TempReg].
 		[AndCqRR] -> [newBranchLeft := operands at: 2.
 						 newBranchRight := ZERO].
 		[CmpC32R] -> [newBranchLeft := operands at: 1.
 						 newBranchRight := TempReg.
-						 opcode := MoveC32R.
+						 opcode := PrivMove.
+						 operands at: 1 put: TempReg].
+		[CmpCwR] -> [newBranchLeft := operands at: 1.
+						 newBranchRight := TempReg.
+						 opcode := PrivMove.
 						 operands at: 1 put: TempReg].
 	} otherwise: [self unreachable].
 

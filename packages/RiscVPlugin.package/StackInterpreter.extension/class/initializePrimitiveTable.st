@@ -4,7 +4,7 @@ initializePrimitiveTable
 	"self initializePrimitiveTable"
 
 	"NOTE: The real limit here is 2047 because of the old method header layout but there is no point in going over the needed size"
-	MaxPrimitiveIndex := 580.	
+	MaxPrimitiveIndex := 582.	
 	MaxQuickPrimitiveIndex := 519.
 
 	PrimNumberExternalCall := 117.
@@ -378,4 +378,8 @@ initializePrimitiveTable
 		(578 primitiveSuspendBackingUpV2)
 		(579 primitiveFail)
 		
-		(580 primitiveNewWithArgUninitialized))
+		(580 primitiveNewWithArgUninitialized)
+		(581 primitiveNewPinnedInOldSpace)
+		(582 primitiveNewWithArgPinnedInOldSpace)
+		
+	)

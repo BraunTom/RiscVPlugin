@@ -7,4 +7,4 @@ concretizeMoveCqR
 	destAddr := operands at: 1.
 	instrOffset := self movI: imm toR: destAddr offset: 0.
 	
-	^ instrOffset * 4
+	^ (self literalHackyValueOffset: instrOffset) * 4

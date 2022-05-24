@@ -6,9 +6,10 @@
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		 ],
+		"test",
+		"foobar" ],
 	"name" : "Normie",
 	"pools" : [
 		 ],
-	"super" : "Object",
+	"super" : "Morph",
 	"type" : "normal" }

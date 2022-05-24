@@ -2,4 +2,6 @@
 	"class" : {
 		 },
 	"instance" : {
-		"primitiveNewWithArgUninitialized" : "WoC 5/15/2022 15:42" } }
+		"primitiveNewPinnedInOldSpace" : "WoC 5/20/2022 17:53",
+		"primitiveNewWithArgPinnedInOldSpace" : "WoC 5/20/2022 17:59",
+		"primitiveNewWithArgUninitialized" : "WoC 5/20/2022 17:31" } }

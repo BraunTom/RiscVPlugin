@@ -36,4 +36,8 @@ initialize
 	X30 := T5 := 30.
 	X31 := T6 := 31.
 
-	PC := 32 
+	PC := 32.
+	
+	self initializeSpecificOpcodes: #(
+		PrivMove) 
+	in: thisContext method

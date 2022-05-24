@@ -3,7 +3,7 @@ unitializedNew: requestedSize
 
 	<primitive: 580 error: ec>
 	(ec == #'insufficient object memory') ifTrue:
-		[self halt. ^self handleFailingUnitializedNew: requestedSize].
+		[^self handleFailingUnitializedNew: requestedSize].
 	(ec == #'bad argument') ifTrue:
 		[self error: self printString, ' called #basicNew: with invalid argument ', requestedSize].
 	self isVariable ifFalse:
