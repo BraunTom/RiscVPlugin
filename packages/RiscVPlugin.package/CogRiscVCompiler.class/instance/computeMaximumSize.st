@@ -14,7 +14,7 @@ computeMaximumSize
 			^ 4 + (self calculateMoveIToROf: constant)].
 		[CmpCqR] -> [^ 4].
 		[JumpLess] -> [^ 4].
-		[MoveMwrR] -> [^ 4].
+		[MoveMwrR] -> [^ (operands at: 0) > 16rFFF ifTrue: [16] ifFalse: [4]].
 		[AddCqR] -> [| offset |
 			offset := (operands at: 0).
 			^ offset >= (1 << 12) 

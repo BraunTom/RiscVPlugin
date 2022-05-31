@@ -90,6 +90,7 @@
 		"reset" : "WoC 5/3/2022 18:18",
 		"setFramePointer:stackPointer:" : "WoC 5/3/2022 19:47",
 		"simulateLeafCallOf:nextpc:memory:" : "WoC 5/8/2022 04:09",
+		"smashRegisterAccessors" : "WoC 5/25/2022 02:17",
 		"sp" : "WoC 5/3/2022 19:48",
 		"sp:" : "WoC 5/3/2022 22:34",
 		"x0" : "LM/WoC 5/6/2022 19:22",

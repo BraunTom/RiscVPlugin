@@ -48,6 +48,7 @@ dispatchConcretize
 		[MoveC32R] -> [^ self concretizeMoveCwR].
 		[JumpLong] -> [^ self concretizeJumpFull].
 		[JumpLongZero] -> [^ self concretizeJumpLongZero].
-		[PrivMove] -> [^ self concretizePrivMove]
+		[PrivMove] -> [^ self concretizePrivMove].
+		[XorCwR] -> [^ self concretizeXorCwR].
 	}.
 	^ 0 "keep slang happy"
