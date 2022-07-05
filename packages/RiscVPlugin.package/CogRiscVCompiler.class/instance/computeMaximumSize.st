@@ -80,7 +80,11 @@ computeMaximumSize
 			^ (self calculateMoveIToROf: constant)].
 		[XorCwR] -> [| constant |
 			constant := operands at: 0.
-			^ (self calculateMoveIToROf: constant) + 4]
-		
+			^ (self calculateMoveIToROf: constant) + 4].
+		[Nop] -> [^ 0].
+		[AddCwR] -> [| constant |
+			constant := operands at: 0.
+			^ (self calculateMoveIToROf: constant) + 4].
+		[ArithmeticShiftRightRR] -> [^ 4].
 	}.
 	^ 0 "keep slang happy"

@@ -1,4 +1,4 @@
-as yet unclassified
+opcodes
 branchOpcode
 
 	^ 2r1100011

@@ -50,5 +50,8 @@ dispatchConcretize
 		[JumpLongZero] -> [^ self concretizeJumpLongZero].
 		[PrivMove] -> [^ self concretizePrivMove].
 		[XorCwR] -> [^ self concretizeXorCwR].
+		[Nop] -> [^ 0].
+		[AddCwR] -> [^ self concretizeAddCqR].
+		[ArithmeticShiftRightRR] -> [^ self concretizeArithmeticShiftRightRR].
 	}.
 	^ 0 "keep slang happy"

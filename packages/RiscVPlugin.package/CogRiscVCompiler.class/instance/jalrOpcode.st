@@ -1,4 +1,4 @@
-as yet unclassified
+opcodes
 jalrOpcode
 
 	^ 2r1100111

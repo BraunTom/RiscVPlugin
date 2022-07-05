@@ -7,12 +7,13 @@ literalBeforeFollowingAddress: followingAddress
 		do: [:ea| Transcript showln: (cogit processor disassembleInstructionAt: followingAddress + (ea * 4) In: objectMemory memory)]
 		cogit processor disassembleInstructionAt: followingAddress - 4 In: objectMemory memory
 		"
-		
+	
+	self halt.
+	self flag: #todo.
+	"TODO: Rewrite, after reworking LI instruction"
 	1 to: self machineCodeWords 
 		do: [:each | | instr currentAddress |
 			currentAddress := followingAddress - (each * 4).
 			instr := self adaptEndianness: (objectMemory long32At: currentAddress).
 			instr = self literalHackyValue
 				ifTrue: [^ self literalAtAdress: currentAddress - 4]].
-		
-	self halt.

@@ -1,0 +1,14 @@
+{
+	"category" : "RiscVPlugin",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "RiscVCompilerTests",
+	"pools" : [
+		 ],
+	"super" : "AbstractInstructionTests",
+	"type" : "normal" }

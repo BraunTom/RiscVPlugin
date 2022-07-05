@@ -1,4 +1,4 @@
-as yet unclassified
+opcodes
 luiOpcode
 
 	^ 2r0110111

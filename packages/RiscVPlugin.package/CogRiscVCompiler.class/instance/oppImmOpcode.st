@@ -1,4 +1,4 @@
-as yet unclassified
+opcodes
 oppImmOpcode
 
 	^ 2r0010011
