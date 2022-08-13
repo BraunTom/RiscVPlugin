@@ -13,7 +13,7 @@ testAddition
 				
 				self processor
 					reset.
-				"self halt."
+
 				[processor pc < memory size] whileTrue: [
 					self processor singleStepIn: memory].
 				

@@ -7,7 +7,7 @@ movI: immediate toR: register offset: initialOffset
 	"Hack: For negative integers, we only care about the full 64-Bit Bit pattern.
 	Bit-Anding with 64-Bit will turn a negative value into a LargePositiveInteger with the correct two-complement bit pattern."
 	bits := immediate bitAnd: 16rFFFFFFFFFFFFFFFF.
-	
+
 	"Loading large immediates in Risc-V is pretty challenging. Small immediates can simply be done by either:
 	ADDI, or LUI+ADDI, but we want to support full 64-Bit values.
 	As both ADDI, as well as LUI do signed arithmetic, this makes it basically impossible to load a 64-Bit value in two parts without using two registers.
@@ -17,12 +17,12 @@ movI: immediate toR: register offset: initialOffset
 	
 	highbits := (bits bitAnd: 16rFFFFFFFF00000000) >> 32.
 	highbits := (highbits bitAnd: 16r0000FFFF) << 16 bitOr: (highbits bitAnd: 16rFFFF0000) >> 16.
-	self machineCode at: offset put: highbits.
+	machineCode at: offset put: highbits.
 	offset := offset + 1.
 	
 	lowbits := bits bitAnd: 16r00000000FFFFFFFF.
 	lowbits := (lowbits bitAnd: 16r0000FFFF) << 16 bitOr: (lowbits bitAnd: 16rFFFF0000) >> 16.
-	self machineCode at: offset put: lowbits.
+	machineCode at: offset put: lowbits.
 	offset := offset + 1.  
 	
 	offset := self ldOff: 0 fromRs: register to: register offset: offset.
